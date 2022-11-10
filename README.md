@@ -30,7 +30,10 @@ Step 4 : NonLinear Camera measurement model and Camera lidar fusion model
 In this step we implement the code in the measurement.py file. We transform the coordinates from vehicle to sensor and use the camera intrinsic calibration parameters to calculate Hx matrix
 
 ![step4_scene](https://user-images.githubusercontent.com/32779283/201006410-9e225187-437d-499e-9e18-9ef5b2bbbf66.png)
-![step_4_rmse](https://user-images.githubusercontent.com/32779283/201006422-9f00c9c0-89ec-454d-8a1c-7ecc6d56d4b2.png)
+
+* corrected with updated trackmanagement.py. RMSE is below 0.2.
+![step_4_rmse](https://user-images.githubusercontent.com/32779283/201186739-3cbf309f-703f-4959-8efb-009965b73dcb.png)
+
 
 
 final result
