@@ -133,12 +133,17 @@ class Trackmanagement:
             track = self.track_list[i]
             # check visibility 
             if meas_list: # if not empty
+                # check for visibility
                 if meas_list[0].sensor.in_fov(track.x): 
                     
                         # your code goes here
-                        track.state = 'tentative'
-                        if track.score > params.delete_threshold + 1:
-                            track.score -= 1./params.window
+                        #track.state = 'tentative' (after code review)
+                        track.score -= 1.0/params.window
+                        if track.score <=0.0:
+                            track.score = 0.0
+#                         if track.score > params.delete_threshold + 1:
+#                             track.score -= 1./params.window
+
                      
 
         # delete old tracks
@@ -150,6 +155,7 @@ class Trackmanagement:
 #                 self.delete_track(track)
 #             elif (track.state != 'confirmed') and (track.P[1,1] >= params.max_P):
 #                 self.delete_track(track)
+
         # delete old tracks
         for track in self.track_list:
             if ((track.state == "confirmed" and track.score < params.delete_threshold) \
