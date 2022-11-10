@@ -37,8 +37,7 @@ In this step we implement the code in the measurement.py file. We transform the 
 
 
 final result
-![my_tracking_results](https://user-images.githubusercontent.com/32779283/201007045-764b6b92-b7b6-4c9b-b9a2-95c1f05bfa96.gif)
-
+![my_tracking_results (1) (1)](https://user-images.githubusercontent.com/32779283/201189566-2f4c9d2f-0b62-47e1-8619-9c21af8fc542.gif)
 Do you see any benefits in camera-lidar fusion compared to lidar-only tracking (in theory and in your concrete results)?
 In theory, additional snesors benefit in real world scenarios. Both lidars and cameras have thier own weakness and strengths. Lidar is very precise with calculating distance and speed and Cameras are very good at object classification and detecting changes like heading, measurements like height width etc. in the above project we dont notice significant difference by adding additional sensor with limited data runs. Multiple sensors decrease uncertainity andmake the systemm more robuts.
 
